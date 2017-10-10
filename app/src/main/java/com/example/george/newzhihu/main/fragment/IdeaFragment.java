@@ -24,9 +24,9 @@ public class IdeaFragment extends BaseFragment{
         return fragment;
     }
 
-    @Nullable
+
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    protected View initView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         TextView textView = new TextView(getContext());
         textView.setText(this.getClass().getSimpleName());
         return textView;

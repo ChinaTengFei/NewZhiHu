@@ -33,14 +33,14 @@ public class MainActivity extends BaseActivity<MainContract.IndexPresenter, Main
         ButterKnife.bind(this);
         ArrayList<BaseFragment> baseFragments = new ArrayList<BaseFragment>() {
             {
-                add(IdeaFragment.newInstance());
                 add(IndexFragment.newInstance());
-                add(MineFragment.newInstance());
+                add(IdeaFragment.newInstance());
                 add(NoticeFragment.newInstance());
+                add(MineFragment.newInstance());
             }
         };
-
-        vpMain.setAdapter(new MainAdapter(baseFragments,getSupportFragmentManager()));
+        String[] names = {"首页","想法","通知","我的"};
+        vpMain.setAdapter(new MainAdapter(baseFragments,names,getSupportFragmentManager()));
         tlTitleLayout.setupWithViewPager(vpMain);
     }
 }
